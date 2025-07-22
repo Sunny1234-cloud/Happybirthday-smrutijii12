@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Smruti 🎉</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      color: white;
+      background: url('https://i.ibb.co/B2zxC8FV/Smrutii-2.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+    .container {
+      text-align: center;
+      padding: 60px 20px;
+    }
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 3em;
+      color: #ffccff;
+    }
+    .gallery img {
+      width: 200px;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    }
+    .love-letter {
+      background: rgba(0, 0, 0, 0.6);
+      margin: 30px auto;
+      padding: 20px;
+      max-width: 600px;
+      border-radius: 10px;
+      font-size: 1.1em;
+    }
+    .footer {
+      margin-top: 40px;
+      font-size: 1.2em;
+      color: #ffc;
+    }
+    .countdown {
+      font-size: 1.5em;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <audio autoplay loop hidden>
+    <source src="https://raw.githubusercontent.com/YOUR_USERNAME/happybirthday-smruti/main/sahiba.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="container">
+    <h1>🎂 Happy Birthday Smruti Jii🎂</h1>
+    <p class="countdown" id="countdown"></p>
+
+    <div class="gallery">
+      <img src="https://i.ibb.co/5XvyPVQg/Smruti-1.jpg" alt="Smruti 1">
+      <img src="https://i.ibb.co/B2zxC8FV/Smrutii-2.jpg" alt="Smruti 2">
+      <img src="https://i.ibb.co/cc3yjCcz/Smruti-3.jpg" alt="Smruti 3">
+      <img src="https://i.ibb.co/fVMMhRWd/Smruti-4.jpg" alt="Smruti 4">
+    </div>
+
+    <div class="message">
+  <br>My dearest Smruti Jii</br>
+ <br> On your special day, I want you to know just how much you mean to me. You light up my life in ways I can’t even express.</br>
+  <br>Your smile, your laugh, and your presence are the most precious gifts I have. May this birthday bring you as much joy as you bring to me every day.</br>
+  <br>I feel blessed to walk this journey with you.</br>
+  Happy Birthday, my angel. I love you! 💖
+</div>
+      <p>Forever yours,</p>
+      <p style="font-family: 'Pacifico', cursive; font-size: 1.5em;">With love, Bobby 💌</p>
+    </div>
+
+    <div class="footer">
+      ❤️ Wishing you endless happiness and beautiful memories 💫
+    </div>
+  </div>
+
+  <script>
+    // Countdown Timer
+    const birthday = new Date("July 23, 2025 00:00:00").getTime();
+    const countdownEl = document.getElementById("countdown");
+    const x = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = birthday - now;
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      if (distance > 0) {
+        countdownEl.innerHTML = `Countdown: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+      } else {
+        countdownEl.innerHTML = "🎉 Happy Birthday! 🎉";
+        clearInterval(x);
+      }
+    }, 1000);
+  </script>
